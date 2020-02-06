@@ -4,7 +4,9 @@ const logger = require('morgan');
 const express = require('express');
 const app = express();
 const http = require('http');
+const cors = require('cors');
 const server = http.createServer(app);
+app.use(cors());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
