@@ -11,9 +11,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "morgan": "^1.9.1",
-    "sendmail": "^1.6.1"
-  },
-  "devDependencies": {
+    "sendmail": "^1.6.1",
     "cookie-parser": "^1.4.4"
   },
   "description": ""
