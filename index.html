@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const msg = {
+        id:3,
+        text:1,
+        reason:"no"
+    }
+    const xhr = new XMLHttpRequest();
+    const url = "https://smsdygy.herokuapp.com/feedback";
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const json = JSON.parse(xhr.responseText);
+            console.log(json.email + ", " + json.password);
+        }
+    };
+    const data = JSON.stringify(msg);
+    xhr.send(data);
+</script>
+</body>
+</html>
