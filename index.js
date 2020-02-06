@@ -61,7 +61,7 @@ function parseJSON(content) {
             mail += `<br> <img style="transform: scale(0,5)" src="${content.file}"> <br> `
         }
         else if (content.hasOwnProperty(key)){
-            mail+= `<br> <span>${key}: ${content.key}</span>`
+            mail+= `<br> <span>${key}: ${content[key]}</span>`
         }
     }
     return mail
